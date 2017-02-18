@@ -8,4 +8,6 @@
 #include "log.h"
 #include "assert.h"
 
+void print_by_byte(const void *p, int size);
+
 #endif
