@@ -13,6 +13,7 @@
 #include "assert.h"
 #include "gen.h"
 #include "arr.h"
+#include "time.h"
 
 #define PD(str)		printf(#str ":%d\n", (str))
 #define PN(n)		printf(#n " is %d\n", (n));
@@ -50,6 +51,13 @@ static inline void swap_by_addr(int *pa, int *pb)
 	*pa = *pb;
 	*pb = temp;
 }
+#ifndef swap
+#define swap		swap_by_addr
+#endif
+
+#ifndef SWAP
+#define SWAP		swap_by_addr
+#endif
 
 void print_by_byte(const void *p, int size);
 
@@ -57,6 +65,10 @@ void print_by_byte(const void *p, int size);
 static inline int int_compare(const void *v1, const void *v2)
 {
 	return *(int *)v1 - *(int *)v2;
+}
+static inline int int_compare_desc(const void *v1, const void *v2)
+{
+	return *(int *)v2 - *(int *)v1;
 }
 
 #endif
