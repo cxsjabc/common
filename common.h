@@ -45,12 +45,23 @@
 
 #define ARR_SIZE(arr)		(sizeof(arr) / sizeof(arr[0]))
 
+#ifndef __cplusplus
 static inline void swap_by_addr(int *pa, int *pb)
 {
 	int temp = *pa;
 	*pa = *pb;
 	*pb = temp;
 }
+#else
+template <class T>
+static inline void swap_by_addr(T *pa, T *pb)
+{
+	T temp = *pa;
+	*pa = *pb;
+	*pb = temp;
+}
+#endif
+
 #ifndef swap
 #define swap		swap_by_addr
 #endif
