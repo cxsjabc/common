@@ -17,10 +17,6 @@ void	gen_arr(int arr[], int size)
 	}
 }
 
-int int_compare(const void *v1, const void *v2)
-{
-	return *(int *)v1 - *(int *)v2;
-}
 
 // please make sure: size <= RAND_MAX
 void	gen_sorted_arr(int arr[], int size)
