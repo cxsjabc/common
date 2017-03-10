@@ -23,6 +23,25 @@ void	show_arr(int arr[], int size)
 	printf("\n");
 }
 	
+int is_arr_equal(int arr1[], int size1, int arr2[], int size2)
+{
+	int i;
+	if(size1 != size2)
+		return 0;
+	for(i = 0; i < size1; ++i)
+		if(arr1[i] != arr2[i])
+			return 0;
+	return 1;
+}
+
+int	is_arr_equal_no_index(int arr1[], int size1, int arr2[], int size2)
+{
+	if(size1 != size2)
+		return 0;	
+	qsort(arr1, size1, sizeof(int), int_compare);
+	qsort(arr2, size2, sizeof(int), int_compare);
+	return is_arr_equal(arr1, size1, arr2, size2);
+}
 
 // start_value: 4, size: 5 , arr: 4 5 6 7 8 
 void	init_basic_arr(int arr[], int size, int start_value)

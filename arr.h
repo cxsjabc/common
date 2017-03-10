@@ -8,6 +8,9 @@ int is_arr_sorted(int arr[], int size);
 void	show_arr(int arr[], int size);
 #define print_arr show_arr
 
+int 	is_arr_equal(int arr1[], int size1, int arr2[], int size2);
+int		is_arr_equal_no_index(int arr1[], int size1, int arr2[], int size2);
+
 void	init_basic_arr(int ar[], int size, int start_value);
 void	reset_basic_arr(int arr[], int size, int reset_value);
 void	init_reverse_basic_arr(int arr[], int size, int start_value);
