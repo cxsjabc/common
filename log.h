@@ -25,15 +25,15 @@ enum
 };
 
 #ifndef _LOG_LEVEL
-#define _LOG_LEVEL LOG_LEVEL_DEBUG
+#define _LOG_LEVEL LOG_LEVEL_VERBOSE		// we use verbose for debugging
 #endif
 
 #ifndef LOG_LEVEL
 #define LOG_LEVEL 	_LOG_LEVEL 
 #endif
 
-#define log_v(fmt, ...)	do { if(LOG_LEVEL <= VERBOSE)	printf(fmt, ##__VA_ARGS__); } while(0)
-#define log_d(fmt, ...)	do { if(LOG_LEVEL <= DEBUG)	printf(fmt, ##__VA_ARGS__); } while(0)
+#define log_v(fmt, ...)	do { if(_LOG_ENABLE && LOG_LEVEL <= VERBOSE)	printf(fmt, ##__VA_ARGS__); } while(0)
+#define log_d(fmt, ...)	do { if(_LOG_ENABLE && LOG_LEVEL <= DEBUG)	printf(fmt, ##__VA_ARGS__); } while(0)
 
 #ifndef _LOG_ENABLE
 #define _LOG_ENABLE 1
