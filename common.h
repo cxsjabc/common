@@ -14,6 +14,7 @@
 #include "gen.h"
 #include "arr.h"
 #include "time.h"
+#include "matrix.h"
 
 #define PD(str)		printf(#str ":%d\n", (str))
 #define PN(n)		printf(#n " is %d\n", (n));
