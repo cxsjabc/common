@@ -14,12 +14,18 @@
 
 enum 
 {
-	LOG_LEVEL_VERBOSE,
-	LOG_LEVEL_DEBUG,
-	LOG_LEVEL_INFO,
-	LOG_LEVEL_WARNING,
-	LOG_LEVEL_ERROR,
-	LOG_LEVEL_FATAL,
+	LOG_LEVEL_VERBOSE 	= VERBOSE,
+	LOG_LEVEL_DEBUG 	= DEBUG,
+	LOG_LEVEL_INFO		= INFO,
+	LOG_LEVEL_WARNING	= WARN,
+	LOG_LEVEL_ERROR		= ERROR,
+	LOG_LEVEL_FATAL		= FATAL,
+	LOG_V = LOG_LEVEL_VERBOSE,
+	LOG_D = LOG_LEVEL_DEBUG,
+	LOG_I = LOG_LEVEL_INFO,
+	LOG_W = LOG_LEVEL_WARNING,
+	LOG_E = LOG_LEVEL_ERROR,
+	LOG_F = LOG_LEVEL_FATAL,
 
 	LOG_LEVEL_MAX
 };
@@ -40,7 +46,7 @@ enum
 #endif
 // it needs macro: _LOG_ENABLE
 #define	LOG_HERE	do { \
-						if(_LOG_ENABLE && _LOG_LEVEL == LOG_LEVEL_VERBOSE) \
+						if(_LOG_ENABLE && _LOG_LEVEL <= LOG_LEVEL_VERBOSE) \
 							printf("Log Here:%s@%d\n", __FUNCTION__, __LINE__); \
 					} while(0)
 
@@ -48,7 +54,7 @@ enum
 // it needs macro: _LOG_LEVEL
 #define LOG_V(fmt, args...) \
 		do { \
-			if(_LOG_ENABLE && _LOG_LEVEL == LOG_LEVEL_VERBOSE) \
+			if(_LOG_ENABLE && _LOG_LEVEL <= LOG_LEVEL_VERBOSE) \
 				printf("[V]" fmt "\n", ##args); \
 		} while(0)	
 
