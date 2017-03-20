@@ -10,7 +10,7 @@ STACK *stack_create(int size)
 	STACK *stack = (STACK *)malloc(sizeof(STACK));
 	int *p = NULL;
 	
-	ASSERT(stack);
+	ASSERT(stack != NULL);
 	if(!stack)
 		goto label_alloc_fail;
 	

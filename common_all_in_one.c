@@ -8,3 +8,4 @@
 #include "matrix.c"
 #include "stack.c"
 #include "tree.c"
+#include "list.c"

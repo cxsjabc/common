@@ -11,6 +11,7 @@
 #include "stack.h"
 #include "tree.h"
 #include "limit.h"
+#include "list.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,11 +23,17 @@
 
 
 #define PD(str)		printf(#str ":%d\n", (str))
-#define PN(n)		printf(#n " is %d\n", (n));
-#define PC(n)		printf(#n " is %c\n", (n));
-#define PU(n)		printf(#n " is %u\n", (n));
-#define PL(n)		printf(#n " is %ld\n", (n));
-#define PP(n)		printf(#n " is %p\n", (n));
+#ifndef PN
+#define PN(n)		printf(#n " is %d\n", (n))
+#endif
+#define PC(n)		printf(#n " is %c\n", (n))
+#define PU(n)		printf(#n " is %u\n", (n))
+#define PL(n)		printf(#n " is %ld\n", (n))
+#define PP(n)		printf(#n " is %p\n", (n))
+
+#ifndef PN2
+#define PN2(n1, n2)		printf(#n1 ":%d, " #n2 ":%d." "\n", (n1), (n2))
+#endif
 
 #define P_HERE()	printf("execute %s@%d\n", __FUNCTION__, __LINE__);
 
