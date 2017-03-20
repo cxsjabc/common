@@ -4,6 +4,17 @@
 #include "common.h"
 
 
+PTree bst_create(int data)
+{
+	PTree tree = (PTree)malloc(sizeof(TreeNode));
+	if(!tree)
+		return NULL;
+
+	tree->left = tree->right = NULL;	
+	tree->data = data;
+	return tree;
+}
+
 void bst_make_empty(PTree tree)
 {
 	if(tree == NULL)

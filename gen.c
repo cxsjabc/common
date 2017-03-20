@@ -98,3 +98,23 @@ void	gen_fixed_range_arr(int arr[], int size, int min, int max)
 	while(i < size)
 		arr[i++] = value;	
 }
+
+#if 0
+/* not completed! */
+PTree	gen_bst_tree(int size, int max, int min, int init_value)
+{
+	PTree tree;
+	if(init_value == INT_MAX)
+		init_value = (max + min) / 2;	
+	tree = bst_create(init_value);
+	if(!tree)
+		return NULL;
+
+	return tree;
+
+label_alloc_fail:
+	if(tree)
+		bst_free(tree);
+	return NULL;
+}
+#endif

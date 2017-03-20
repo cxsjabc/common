@@ -1,6 +1,17 @@
 #ifndef COMMON_H
 #define COMMON_H
 
+/* move my header above system header files: I need to trust my files! */
+#include "log.h"
+#include "assert.h"
+#include "gen.h"
+#include "arr.h"
+#include "time.h"
+#include "matrix.h"
+#include "stack.h"
+#include "tree.h"
+#include "limit.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,12 +20,6 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "log.h"
-#include "assert.h"
-#include "gen.h"
-#include "arr.h"
-#include "time.h"
-#include "matrix.h"
 
 #define PD(str)		printf(#str ":%d\n", (str))
 #define PN(n)		printf(#n " is %d\n", (n));

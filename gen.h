@@ -18,4 +18,8 @@ void	gen_basic_desc_arr(int arr[], int size, int min, int max);
 void	gen_fixed_arr(int arr[], int size, int value);
 void	gen_fixed_range_arr(int arr[], int size, int min, int max);
 
+#if 0
+/* gen a tree */ 
+PTree	gen_bst_tree(int size, int max, int min);
+#endif
 #endif

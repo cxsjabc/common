@@ -14,13 +14,15 @@ typedef TreeNode * 	PTree;
 
 typedef TreeNode 		Tree;
 
-void		bst_make_empty(PTree tree);
+PTree		bst_create(int data);
+
+PTree		bst_insert(PTree tree, int data);
 
 PTreeNode	bst_find(PTree tree, int data);
 int			bst_find_min(PTree tree);
 int			bst_find_max(PTree tree);
 
-PTree		bst_insert(PTree tree, int data);
+void		bst_make_empty(PTree tree);
 
 void		bst_show(PTree tree);
 
