@@ -15,6 +15,36 @@ PTree bst_create(int data)
 	return tree;
 }
 
+PTree		bst_gen_no_sorted(int node_size, int data_min, int data_max)
+{
+	PTree t;
+	int curr_data;
+	int i = 0;
+
+	if(node_size > data_max - data_min + 1)
+		curr_data = data_min;
+	else
+		curr_data = data_max - node_size + 1;
+
+	t = bst_create(curr_data);
+	if(!t)
+		goto alloc_fail;
+	++i;
+	while(i < node_size) {
+		// TODO: queue save the node, then insert in left or right			
+		++i;
+	}	
+
+alloc_fail:
+	
+	return NULL;
+}
+
+PTree		bst_gen(int node_size, int data_min, int data_max)
+{
+	return NULL;
+}
+
 void bst_make_empty(PTree tree)
 {
 	if(tree == NULL)
@@ -54,6 +84,12 @@ int			bst_find_max(PTree tree)
 		return bst_find_max(tree->right);
 }
 
+int			bst_get_depth(PTree tree)
+{
+	if(tree == NULL)
+		return 0;
+	return 1 + MAX(bst_get_depth(tree->left), bst_get_depth(tree->right));
+}
 
 PTree		bst_insert(PTree tree, int data)
 {

@@ -1,6 +1,10 @@
 #ifndef COMMON_H
 #define COMMON_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* move my header above system header files: I need to trust my files! */
 #include "log.h"
 #include "assert.h"
@@ -58,22 +62,6 @@
 
 #define ARR_SIZE(arr)		(sizeof(arr) / sizeof(arr[0]))
 
-#ifndef __cplusplus
-static inline void swap_by_addr(int *pa, int *pb)
-{
-	int temp = *pa;
-	*pa = *pb;
-	*pb = temp;
-}
-#else
-template <class T>
-static inline void swap_by_addr(T *pa, T *pb)
-{
-	T temp = *pa;
-	*pa = *pb;
-	*pb = temp;
-}
-#endif
 
 #ifndef swap
 #define swap		swap_by_addr
@@ -94,5 +82,26 @@ static inline int int_compare_desc(const void *v1, const void *v2)
 {
 	return *(int *)v2 - *(int *)v1;
 }
+
+#ifdef __cplusplus
+}
+#endif
+
+#ifndef __cplusplus
+static inline void swap_by_addr(int *pa, int *pb)
+{
+	int temp = *pa;
+	*pa = *pb;
+	*pb = temp;
+}
+#else
+template <class T>
+static inline void swap_by_addr(T *pa, T *pb)
+{
+	T temp = *pa;
+	*pa = *pb;
+	*pb = temp;
+}
+#endif
 
 #endif
