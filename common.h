@@ -16,6 +16,7 @@ extern "C" {
 #include "tree.h"
 #include "limit.h"
 #include "list.h"
+#include "num.h"
 
 #include <stdio.h>
 #include <stdlib.h>

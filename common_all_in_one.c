@@ -9,3 +9,4 @@
 #include "stack.c"
 #include "tree.c"
 #include "list.c"
+#include "num.c"
