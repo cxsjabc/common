@@ -8,6 +8,8 @@ extern "C" {
 int	is_odd(unsigned int n);
 int	is_even(unsigned int n);
 
+int	is_square(long n);
+
 #ifdef __cplusplus
 }
 #endif

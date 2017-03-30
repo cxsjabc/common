@@ -25,6 +25,7 @@ extern "C" {
 #include <ctype.h>
 #include <time.h>
 #include <unistd.h>
+#include <limits.h>
 
 
 #define PD(str)		printf(#str ":%d\n", (str))
