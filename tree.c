@@ -45,6 +45,26 @@ PTree		bst_gen(int node_size, int data_min, int data_max)
 	return NULL;
 }
 
+PTree		tree_create(PTree *root)
+{
+	PTree t;
+	int data;
+
+	scanf("%d", &data);
+	if(data == -1)
+		return NULL;
+	t = (PTree)malloc(sizeof(TreeNode));
+	if(!t)
+		return NULL;
+	t->data = data;
+	t->left = t->right = NULL;
+	
+	tree_create(&(t->left));
+	tree_create(&(t->right));
+	*root = t;
+	return t;
+}
+
 void bst_make_empty(PTree tree)
 {
 	if(tree == NULL)
