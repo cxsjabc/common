@@ -42,6 +42,9 @@ extern "C" {
 #endif
 
 #define P_HERE()	printf("execute %s@%d\n", __FUNCTION__, __LINE__);
+#ifndef LH
+#define	LH			P_HERE();
+#endif
 
 #define	LOG			printf
 
