@@ -4,8 +4,10 @@ int is_arr_sorted(int arr[], int size)
 {
 	int i = 0;
 	while(i < size - 1) {
-		if(arr[i] > arr[i + 1])
+		if(arr[i] > arr[i + 1]) {
+			printf("failed:i:%d,j:%d,arr[i]:%d, arr[j]:%d\n", i, i + 1, arr[i], arr[i + 1]);
 			return 0;
+		}
 		++i;
 	}
 	return 1;
