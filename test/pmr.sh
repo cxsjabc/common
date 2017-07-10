@@ -7,7 +7,7 @@ then
 fi
 
 REL_PATH=../../
-source common.sh
+source common_non_sys.sh
 DEST=$1
 shift
 
