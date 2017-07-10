@@ -6,8 +6,11 @@
 #include <math.h> 
 #include <assert.h> 
 
+// thanks for apple's c compiler, it can fit with my strcmp and system strcmp
+// even they both exist.
+// Seems that the c compiler use my strcmp if i implement strcmp.
 #include <string.h> 
-#include "../string.h" 
+#include "../string.h" 	
 
 #ifdef _USE_COMMON_SRC
 #define	LOG_LEVEL		LOG_LEVEL_VERBOSE
