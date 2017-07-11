@@ -16,6 +16,7 @@
 #define	LOG_LEVEL		LOG_LEVEL_VERBOSE
 #endif
 
+
 int main()
 {
 	int r;
@@ -31,7 +32,8 @@ int main()
 			break;
 
 		r = strcmp(s1, s2);
-		printf("strcmp:%d\n", r);
+		printf("s1_len:%lu, s2_len:%lu, strcmp:%d\n", 
+			strlen(s1), strlen(s2), r);
 	
 	}
 

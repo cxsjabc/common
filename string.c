@@ -1,4 +1,7 @@
+#include <stdio.h>
 #include "string.h"
+
+//#define	TRACE_XI_STRING
 
 int		strcmp(const char *s1, const char *s2)
 {
@@ -15,4 +18,17 @@ int		strcmp(const char *s1, const char *s2)
 		return *s1;
 	else	
 		return *s2;
+}
+
+size_t	strlen(const char *s)
+{
+#ifdef TRACE_XI_STRING
+printf("call strlen_xi\n");
+#endif
+	size_t len = 0;
+
+	while(*s++)
+		++len;
+
+	return len;
 }
