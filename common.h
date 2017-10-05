@@ -17,6 +17,7 @@ extern "C" {
 #include "limit.h"
 #include "list.h"
 #include "num.h"
+#include "mem.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -47,11 +48,18 @@ extern "C" {
 #ifndef PL
 #define PL(n)		printf(#n " is %ld\n", (n))
 #endif
+#ifndef PUL
+#define PUL(n)		printf(#n " is %lu\n", (n))
+#endif
 #ifndef PLL
 #define PLL(n)		printf(#n " is %lld\n", (n))
 #endif
 #ifndef PP
 #define PP(n)		printf(#n " is %p\n", (n))
+#endif
+
+#ifndef PSS
+#define PSS(n)		printf(#n " is |%s|\n", (n))
 #endif
 
 #ifndef PN2
@@ -97,6 +105,7 @@ extern "C" {
 #endif
 
 void print_by_byte(const void *p, int size);
+void print_str(const void *p, int size);
 
 /* this is for int compare common function: eg: qsort */
 static inline int int_compare(const void *v1, const void *v2)

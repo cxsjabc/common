@@ -10,3 +10,4 @@
 #include "tree.c"
 #include "list.c"
 #include "num.c"
+#include "mem.c"

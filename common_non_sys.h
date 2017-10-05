@@ -1,3 +1,5 @@
+/* This file may be deprecated! */
+
 #ifndef COMMON_NON_SYS_H
 #define	COMMON_NON_SYS_H
 

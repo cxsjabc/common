@@ -1,5 +1,6 @@
-#include "common_non_sys.h"
+/* This file may be deprecated! */
 
+#include "common_non_sys.h"
 
 void print_by_byte(const void *p, int size)
 {
