@@ -30,6 +30,10 @@ extern "C" {
 #include <assert.h>
 
 
+#ifndef PNL
+#define PNL()		printf("\n")
+#endif
+
 #ifndef PD
 #define PD(str)		printf(#str ":%d\n", (str))
 #endif
