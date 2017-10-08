@@ -44,7 +44,7 @@ extern "C" {
 #define PC(n)		printf(#n " is %c\n", (n))
 #endif
 #ifndef PS
-#define PS(n)		printf(#n " is %s\n", (n))
+#define PS(n)		printf(#n " is %s\n", (n) != NULL ? (n) : "NULL")
 #endif
 #ifndef PU
 #define PU(n)		printf(#n " is %u\n", (n))
