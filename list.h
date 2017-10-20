@@ -1,3 +1,9 @@
+#ifdef NOUSE_XI_LIST
+// not use xi's list
+// It's a pity that mysql's c interface header file defines list_free... functions,
+// So I must define a macro for disable my list if you must to use mysql.
+// You can set it on compile arguments: -DNOUSE_XI_LIST
+#else
 #ifndef LIST_H
 #define LIST_H
 
@@ -35,5 +41,7 @@ void 	list_show(LHead list);
 void 	list_free(LHead list);
 
 LHead	list_merge(LHead list1, LHead list2);
+
+#endif
 
 #endif

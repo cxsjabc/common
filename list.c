@@ -1,3 +1,4 @@
+#ifndef NOUSE_XI_LIST
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -249,3 +250,4 @@ label_alloc_fail:
 	return NULL;	
 
 }
+#endif
