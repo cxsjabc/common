@@ -32,6 +32,7 @@ extern "C" {
 #include <limits.h>
 #include <assert.h>
 #include <dirent.h>
+#include <fcntl.h>
 
 
 #ifndef PNL
