@@ -11,3 +11,4 @@
 #include "list.c"
 #include "num.c"
 #include "mem.c"
+#include "err.c"

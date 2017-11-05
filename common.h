@@ -18,9 +18,12 @@ extern "C" {
 #include "list.h"
 #include "num.h"
 #include "mem.h"
+#include "err.h"
 
+#include <sys/stat.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include <string.h>
 #include <math.h>
 #include <ctype.h>
@@ -28,6 +31,7 @@ extern "C" {
 #include <unistd.h>
 #include <limits.h>
 #include <assert.h>
+#include <dirent.h>
 #include <fcntl.h>
 
 
