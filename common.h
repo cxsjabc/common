@@ -28,6 +28,7 @@ extern "C" {
 #include <unistd.h>
 #include <limits.h>
 #include <assert.h>
+#include <fcntl.h>
 
 
 #ifndef PNL
