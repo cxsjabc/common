@@ -21,6 +21,7 @@ extern "C" {
 #include "err.h"
 
 #include <sys/stat.h>
+#include <sys/uio.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
