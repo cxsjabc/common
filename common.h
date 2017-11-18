@@ -34,6 +34,7 @@ extern "C" {
 #include <assert.h>
 #include <dirent.h>
 #include <fcntl.h>
+#include <setjmp.h>
 
 
 #ifndef PNL
