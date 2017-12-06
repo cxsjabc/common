@@ -12,3 +12,4 @@
 #include "num.c"
 #include "mem.c"
 #include "err.c"
+#include "data.c"

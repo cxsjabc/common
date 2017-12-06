@@ -19,6 +19,7 @@ extern "C" {
 #include "num.h"
 #include "mem.h"
 #include "err.h"
+#include "data.h"
 
 #include <sys/stat.h>
 #include <sys/uio.h>
