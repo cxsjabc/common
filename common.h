@@ -43,6 +43,7 @@ extern "C" {
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
+#include <grp.h>
 
 
 #ifndef PNL
