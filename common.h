@@ -44,6 +44,7 @@ extern "C" {
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <grp.h>
+#include <errno.h>
 
 
 #ifndef PNL
