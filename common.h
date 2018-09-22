@@ -116,11 +116,6 @@ extern "C" {
 
 #define ARR_SIZE(arr)		(sizeof(arr) / sizeof(arr[0]))
 
-
-#ifndef swap
-#define swap		swap_by_addr
-#endif
-
 #ifndef SWAP
 #define SWAP		swap_by_addr
 #endif
