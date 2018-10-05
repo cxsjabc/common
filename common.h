@@ -97,6 +97,14 @@ extern "C" {
 
 #define	LOG			printf
 
+#ifndef INPUT
+#define INPUT(n)	scanf("%d", &(n))
+#endif
+
+#ifndef INPUT2
+#define INPUT2(n1, n2)	scanf("%d%d", &(n1), &(n2))
+#endif
+
 #ifndef MAX
 #define MAX(a, b)  ((a) > (b) ? (a) : (b))
 #endif
