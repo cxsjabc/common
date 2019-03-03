@@ -2,6 +2,7 @@
 #define TIME_XI_H
 
 #include <stdio.h>
+#include <time.h>
 
 #ifndef TIME_START
 #define TIME_START(times)	\
