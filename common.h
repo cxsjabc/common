@@ -79,6 +79,10 @@ extern "C" {
 #define PP(n)		printf(#n " is %p\n", (n))
 #endif
 
+#ifndef PX
+#define PX(str)		printf(#str ":%x\n", (str))
+#endif
+
 #ifndef PSS
 #define PSS(n)		printf(#n " is |%s|\n", (n))
 #endif
